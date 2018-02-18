@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="play/game.js"></script>
+
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+      <link rel='stylesheet' href='style.css' />
+  </head>
+  <body>
+    <h1>Welcome to the Best Tic Tac Toe Game Ever</h1>
+    <% if (msg == "")  { %>
+        <form method="POST">
+          <input type="text" name="name" placeholder="name">
+          <button>Submit!</button>
+        </form>
+    <% } else {%>
+        <p> <%=msg%> </p>
+
+    <table id="board">
+        <tr>
+            <td id="0" onClick="regClick(this.id)"></td>
+            <td id="1" onClick="regClick(this.id)"></td>
+            <td id="2" onClick="regClick(this.id)"></td>
+        </tr>
+        <tr>
+            <td id="3" onClick="regClick(this.id)"></td>
+            <td id="4" onClick="regClick(this.id)"></td>
+            <td id="5" onClick="regClick(this.id)"></td>
+        </tr>
+        <tr>
+            <td id="6" onClick="regClick(this.id)"></td>
+            <td id="7" onClick="regClick(this.id)"></td>
+            <td id="8" onClick="regClick(this.id)"></td>
+        </tr>
+    </table>
+    <% } %>
+  <div id="Win">
+
+  </div>
+  </body>
+</html>
